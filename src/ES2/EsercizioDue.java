@@ -7,8 +7,9 @@ import org.slf4j.LoggerFactory;
 import java.util.Scanner;
 
 public class EsercizioDue {
+    private static Logger log = LoggerFactory.getLogger(EsercizioDue.class);
+
     public static void main(String[] args) {
-//        private static Logger log = LoggerFactory.getLogger(EsercizioDue.class);
         Scanner scanner = new Scanner(System.in);
 
         try {
