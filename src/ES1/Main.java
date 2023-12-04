@@ -12,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int[] array = arrayDinumeriRandom(5);
+        int[] array = arrayDiNumeriRandom(5);
         stampaArray(array);
         Scanner scanner = new Scanner(System.in);
 
@@ -31,12 +31,13 @@ public class Main {
             array[posizione] = input;
             stampaArray(array);
         }
-        
-        log.info("HOla");
-        log.error("ULALA");
+
+        //        log.info("HOla");
+        //        log.error("ULALA");
+        scanner.close();
     }
 
-    private static int[] arrayDinumeriRandom(int arrayLenght) {
+    private static int[] arrayDiNumeriRandom(int arrayLenght) {
         Random randomNumbers = new Random();
         int[] array = new int[arrayLenght];
         for (int i = 0; i < arrayLenght; i++) {
@@ -51,7 +52,8 @@ public class Main {
 
     private static void controlloPosizione(int posizione, int lunghezzaArray) {
         if (posizione < 0 || posizione >= lunghezzaArray) {
-            throw new IllegalArgumentException("Posizione non valida. Inserisci un valore tra 0 e " + (lunghezzaArray - 1));
+//            throw new IllegalArgumentException("Posizione non valida. Inserisci un valore tra 0 e " + (lunghezzaArray - 1));
+            log.error("Posizione non valida. Inserisci un valore tra 0 e " + (lunghezzaArray - 1));
         }
     }
 }

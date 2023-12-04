@@ -1,9 +1,14 @@
 package ES2;
 
+import ES1.Main;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Scanner;
 
 public class EsercizioDue {
     public static void main(String[] args) {
+//        private static Logger log = LoggerFactory.getLogger(EsercizioDue.class);
         Scanner scanner = new Scanner(System.in);
 
         try {
@@ -23,6 +28,7 @@ public class EsercizioDue {
             scanner.close();
         }
     }
+
     private static void verificaLitriConsumati(double litriConsumati) throws IllegalAccessException {
         if (litriConsumati == 0) {
             throw new IllegalAccessException("non puoi aver consumato 0 litri");
